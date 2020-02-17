@@ -45,3 +45,16 @@
 Методы массивов - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array  
 DOM API - https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model
 
+## Home Work 17.02.2020
+
+* установить любой веб-сервер для запуска веб-приложения локально (Apache, Nginx, NPM http-server, NPM serve) или использовать Github Pages
+* создать ES6-модуль с несколькими классами (сервисы, утилы, модели)
+* использовать re-export с помощью index.js, export default
+* использовать fetch API и создать несколько методов для коммуникации с публичным серверным API, желательно используя все HTTP методы
+* объединить промисы с помощью Promise.all, Promise.race
+* async/await на вложенных HTTP вызовах
+
+Список публичных API - https://github.com/public-apis/public-apis  
+Модули - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules  
+Fetch API https://developer.mozilla.org/ru/docs/Web/API/Fetch_API/Using_Fetch
+
