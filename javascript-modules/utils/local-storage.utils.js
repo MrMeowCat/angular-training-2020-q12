@@ -1,6 +1,6 @@
 import { LocalStorageService } from '../services/local-storage.service.js';
 
-export class LocalStorageUtils {
+export default class LocalStorageUtils {
 
   static SERVICE = new LocalStorageService();
 
