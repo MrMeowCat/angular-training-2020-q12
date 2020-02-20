@@ -58,3 +58,21 @@ DOM API - https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model
 Модули - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules  
 Fetch API https://developer.mozilla.org/ru/docs/Web/API/Fetch_API/Using_Fetch
 
+
+## Home Work 20.02.2020 (NPM, Webpack, libs)
+
+* установить NodeJS
+* добавить файл package.json, добавить зависимости в секцию dependencies
+* установить зависимости - npm install. Для удаления - npm uninstall. Посмотреть установку в глобальном режиме (npm i -g)
+* использовать webpack (или альтернативы) для сборки и запуска проекта: добавить файл webpack.config.js, создать минимальную  конфигурацию для сборки и запуска
+
+Предлагаю использовать следующие библиотеки:
+ * lodash - https://lodash.com/
+ * bootstrap - https://getbootstrap.com/
+ * axios - https://github.com/axios/axios
+ * moment - https://momentjs.com/
+ * font awesome - https://fontawesome.com/
+ 
+ Для изучения:
+ * команды в NPM - https://docs.npmjs.com/cli-documentation/cli
+ * документация Webpack - https://webpack.js.org/guides/
