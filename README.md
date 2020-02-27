@@ -87,4 +87,9 @@ Fetch API https://developer.mozilla.org/ru/docs/Web/API/Fetch_API/Using_Fetch
 Документация Typescript - https://www.typescriptlang.org/docs/home.html  
 Советы как писать код - https://github.com/labs42io/clean-code-typescript
 
+## Home Work 27.02.2020
 
+* установить @angular/cli глобально
+* создать проект с помощью CLI
+
+Документация Angular - https://angular.io/start
