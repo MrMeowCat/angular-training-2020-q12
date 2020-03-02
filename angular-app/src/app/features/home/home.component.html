@@ -1,0 +1,13 @@
+<app-ui-input [value]="inputValue" (valueChange)="changeValue($event)"></app-ui-input>
+<div #textPlaceholder *ngIf="!!inputValue.length; else: emptyPlaceholder">
+  Text: {{inputValue}}
+</div>
+<ng-container *ngIf="!!inputValue.length">
+  <div #arrayItem *ngFor="let item of [1, 2, 3]">{{item}}</div>
+</ng-container>
+
+<ng-template #emptyPlaceholder>
+  <div>Empty Text</div>
+</ng-template>
+
+
