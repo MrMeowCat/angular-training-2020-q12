@@ -98,4 +98,6 @@ Fetch API https://developer.mozilla.org/ru/docs/Web/API/Fetch_API/Using_Fetch
 
 Рекомендации по разным аспектам в angular с примерами - https://angular.io/guide/styleguide  
 Очень советую, здесь разобрано множество моментов по написанию кода, в том числе и структура директорий и модулей.  
-Небольшая шпаргалка по синтаксису в angular - https://angular.io/guide/cheatsheet
+Небольшая шпаргалка по синтаксису в angular - https://angular.io/guide/cheatsheet  
+"Словарь" - https://angular.io/guide/glossary  
+
