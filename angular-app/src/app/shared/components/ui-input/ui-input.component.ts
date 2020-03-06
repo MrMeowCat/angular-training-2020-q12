@@ -9,6 +9,8 @@ export class UiInputComponent {
 
   @Input()
   value: string = '';
+  @Input()
+  onlyNumbers: boolean;
   @Output()
   valueChange: EventEmitter<string> = new EventEmitter();
 
@@ -23,6 +25,5 @@ export class UiInputComponent {
 
   @HostListener('keyup', ['$event'])
   listenKeyUp(event: any): void {
-    console.log(event);
   }
 }

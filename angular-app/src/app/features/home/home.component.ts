@@ -1,5 +1,6 @@
 import { Component, ElementRef, QueryList, ViewChild, ViewChildren } from '@angular/core';
-import { UiInputComponent } from 'src/app/shared/ui-input/ui-input.component';
+import { CurrencyCodes } from 'src/app/enums/currency-codes.enum';
+import { UiInputComponent } from 'src/app/shared/components/ui-input/ui-input.component';
 
 @Component({
   selector: 'app-home',
@@ -9,6 +10,7 @@ import { UiInputComponent } from 'src/app/shared/ui-input/ui-input.component';
 export class HomeComponent {
 
   inputValue: string = '';
+  currencyCodes: typeof CurrencyCodes = CurrencyCodes;
 
   @ViewChild('textPlaceholder')
   textPlaceholderRef: ElementRef<HTMLElement>;
@@ -18,9 +20,6 @@ export class HomeComponent {
   arrayItemRefs: QueryList<ElementRef<HTMLElement>>;
 
   changeValue(value: string): void {
-    console.log(this.textPlaceholderRef);
-    console.log(this.uiInputComponent);
-    console.log(this.arrayItemRefs);
     this.inputValue = value;
   }
 }

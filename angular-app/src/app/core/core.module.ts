@@ -1,6 +1,8 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeModule } from 'src/app/features/home/home.module';
+import { HttpService } from 'src/app/services/http.service';
 import { SharedModule } from 'src/app/shared/shared.module';
 
 
@@ -9,7 +11,9 @@ import { SharedModule } from 'src/app/shared/shared.module';
   declarations: [],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    HomeModule,
+    HttpClientModule
   ],
   exports: [
     HomeModule

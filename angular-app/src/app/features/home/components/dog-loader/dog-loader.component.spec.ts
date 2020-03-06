@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UiInputComponent } from './ui-input.component';
+import { DogLoaderComponent } from './dog-loader.component';
 
-describe('UiInputComponent', () => {
-  let component: UiInputComponent;
-  let fixture: ComponentFixture<UiInputComponent>;
+describe('DogLoaderComponent', () => {
+  let component: DogLoaderComponent;
+  let fixture: ComponentFixture<DogLoaderComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ UiInputComponent ]
+      declarations: [ DogLoaderComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(UiInputComponent);
+    fixture = TestBed.createComponent(DogLoaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
