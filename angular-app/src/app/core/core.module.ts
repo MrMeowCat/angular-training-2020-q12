@@ -1,10 +1,9 @@
+import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { HomeModule } from 'src/app/features/home/home.module';
-import { HttpService } from 'src/app/services/http.service';
+import { LoginModule } from 'src/app/features/login/login.module';
 import { SharedModule } from 'src/app/shared/shared.module';
-
 
 
 @NgModule({
@@ -13,10 +12,12 @@ import { SharedModule } from 'src/app/shared/shared.module';
     CommonModule,
     SharedModule,
     HomeModule,
+    LoginModule,
     HttpClientModule
   ],
   exports: [
-    HomeModule
+    HomeModule,
+    LoginModule
   ]
 })
 export class CoreModule { }

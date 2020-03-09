@@ -1,0 +1,29 @@
+<div class="login-container">
+  <div class="login-content" [formGroup]="form">
+    <div class="input-holder">
+      <label>Email</label>
+      <input formControlName="email"
+             type="email"
+             [class.invalid]="form.controls['email'].touched && form.controls['email'].invalid">
+      <p class="error-message" *ngIf="form.controls['email'].touched && form.controls['email'].invalid">
+        Email is invalid
+      </p>
+    </div>
+    <div class="input-holder">
+      <label>Password</label>
+      <input formControlName="password"
+             type="password"
+             [class.invalid]="form.controls['password'].touched && form.controls['password'].invalid">
+      <p class="error-message" *ngIf="form.controls['password'].hasError('invalidPassword')">
+        Email or password is invalid
+      </p>
+      <p class="error-message" *ngIf="form.controls['password'].touched &&
+      form.controls['password'].hasError('passwordLength')">
+        Password should be 6 or more symbols
+      </p>
+    </div>
+    <div class="login-button-container">
+      <button class="login-button" (click)="submit()">Login</button>
+    </div>
+  </div>
+</div>
