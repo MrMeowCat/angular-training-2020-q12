@@ -3,6 +3,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { HomeModule } from 'src/app/features/home/home.module';
 import { LoginModule } from 'src/app/features/login/login.module';
+import { RxjsDemoModule } from 'src/app/features/rxjs-demo/rxjs-demo.module';
 import { SharedModule } from 'src/app/shared/shared.module';
 
 
@@ -13,11 +14,13 @@ import { SharedModule } from 'src/app/shared/shared.module';
     SharedModule,
     HomeModule,
     LoginModule,
+    RxjsDemoModule,
     HttpClientModule
   ],
   exports: [
     HomeModule,
-    LoginModule
+    LoginModule,
+    RxjsDemoModule
   ]
 })
 export class CoreModule { }
