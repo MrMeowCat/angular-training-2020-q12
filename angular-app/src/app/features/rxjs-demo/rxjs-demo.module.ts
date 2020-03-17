@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { SharedModule } from 'src/app/shared/shared.module';
 import { RxjsDemoComponent } from './rxjs-demo.component';
 
 
@@ -7,7 +8,8 @@ import { RxjsDemoComponent } from './rxjs-demo.component';
 @NgModule({
   declarations: [RxjsDemoComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    SharedModule
   ],
   exports: [
     RxjsDemoComponent

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { LoginService } from 'src/app/services/login.service';
 
 @Component({
@@ -15,7 +16,11 @@ export class LoginComponent {
   });
 
   constructor(private formBuilder: FormBuilder,
-              private loginService: LoginService) {
+              private loginService: LoginService,
+              private router: Router) {
+    this.router.events.subscribe((event) => {
+      console.log(event);
+    });
   }
 
   submit(): void {
@@ -28,7 +33,7 @@ export class LoginComponent {
     const {email, password} = this.form.value;
     this.loginService.login(email, password).subscribe((success: boolean) => {
       if (success) {
-        alert('Logged in');
+        this.router.navigate(['/', 'home']);
       } else {
         this.form.controls['password'].setValue('');
         this.form.controls['password'].setErrors({invalidPassword: true});

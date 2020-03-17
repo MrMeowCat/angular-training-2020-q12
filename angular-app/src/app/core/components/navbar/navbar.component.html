@@ -1,0 +1,13 @@
+<nav class="navbar">
+  <div class="brand">Angular Demo</div>
+  <div class="links">
+    <ng-container *ngIf="loginService.isLoggedIn()">
+      <a routerLink="/home">Home</a>
+      <a routerLink="/rxjs">RxJS</a>
+      <a (click)="logout()">Logout</a>
+    </ng-container>
+    <a *ngIf="!loginService.isLoggedIn()" routerLink="/login">Login</a>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

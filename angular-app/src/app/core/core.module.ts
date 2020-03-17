@@ -1,26 +1,25 @@
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { HomeModule } from 'src/app/features/home/home.module';
+import { CoreRoutingModule } from 'src/app/core/core-routing.module';
 import { LoginModule } from 'src/app/features/login/login.module';
 import { RxjsDemoModule } from 'src/app/features/rxjs-demo/rxjs-demo.module';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [NavbarComponent],
   imports: [
     CommonModule,
     SharedModule,
-    HomeModule,
     LoginModule,
     RxjsDemoModule,
-    HttpClientModule
+    HttpClientModule,
+    CoreRoutingModule
   ],
   exports: [
-    HomeModule,
-    LoginModule,
-    RxjsDemoModule
+    NavbarComponent
   ]
 })
 export class CoreModule { }
