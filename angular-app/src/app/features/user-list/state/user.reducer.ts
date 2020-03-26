@@ -4,16 +4,20 @@ import { User } from 'src/app/models/user.model';
 
 export interface UserState {
   users: User[];
+  usersLoading: boolean;
 }
 
 const initialUserState: UserState = {
-  users: []
+  users: [],
+  usersLoading: false
 };
 
 export const userReducer: ActionReducer<UserState> = (state: UserState = initialUserState, action: UserActions): UserState => {
   switch (action.type) {
-    case UserActionTypes.SET_USER:
-      return {...state, users: action.users};
+    case UserActionTypes.GET_USERS:
+      return {...state, usersLoading: true};
+    case UserActionTypes.SET_USERS:
+      return {...state, users: action.users, usersLoading: false};
     case UserActionTypes.ADD_USER:
       return {...state, users: [...state.users, action.user]};
     default:

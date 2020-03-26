@@ -1,9 +1,10 @@
 import { Component, OnDestroy } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { Subject } from 'rxjs';
-import { takeUntil } from 'rxjs/operators';
+import { Observable, Subject } from 'rxjs';
+import { map, takeUntil } from 'rxjs/operators';
 import { AppState } from 'src/app/core/state';
-import { AddUserAction, SetUserAction } from 'src/app/features/user-list/state/user.actions';
+import { AddUserAction, GetUsersAction } from 'src/app/features/user-list/state/user.actions';
+import { UserState } from 'src/app/features/user-list/state/user.reducer';
 import { User } from 'src/app/models/user.model';
 
 @Component({
@@ -14,21 +15,12 @@ import { User } from 'src/app/models/user.model';
 export class UserListComponent implements OnDestroy {
 
   users: User[] = [];
+  usersLoading$: Observable<boolean>;
   private destroy$: Subject<void> = new Subject();
 
   constructor(private store: Store<AppState>) {
-    const users: User[] = [
-      {
-        username: 'admin',
-        email: ''
-      },
-      {
-        username: 'guest',
-        email: ''
-      }
-    ];
-    // добавляем в store массив юзеров
-    store.dispatch(new SetUserAction(users));
+    // кидаем экшен, чтобы достать юзеров через API, должен сработать эффект для этого экшена
+    store.dispatch(new GetUsersAction());
     // достаем юзеров
     store.select((state: AppState) => {
       return state.userState.users;
@@ -37,6 +29,11 @@ export class UserListComponent implements OnDestroy {
     ).subscribe((users: User[]) => {
       this.users = users;
     });
+
+    // Еще 1 способ создать селектор - с помощью строкового ключа
+    this.usersLoading$ = store.select('userState').pipe(
+      map((state: UserState) => state.usersLoading)
+    );
   }
 
   ngOnDestroy(): void {

@@ -1,3 +1,4 @@
 <h3>User List</h3>
 <button (click)="addUser()">Add User</button>
+<p *ngIf="usersLoading$ | async" style="color: green">Users loading...</p>
 <p *ngFor="let user of users">{{user.username}}</p>
