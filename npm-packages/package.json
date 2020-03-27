@@ -1,0 +1,22 @@
+{
+  "name": "npm-packages",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "serve": "webpack-dev-server --open"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.12.1",
+    "axios": "^0.19.2",
+    "bootstrap": "^4.4.1",
+    "lodash": "^4.17.15"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
+}

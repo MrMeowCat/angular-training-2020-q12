@@ -1,0 +1,23 @@
+<app-ui-input [onlyNumbers]="true" [value]="inputValue" (valueChange)="changeValue($event)"></app-ui-input>
+<div #textPlaceholder *ngIf="!!inputValue.length; else: emptyPlaceholder">
+  Text: {{inputValue}}
+</div>
+<ng-container *ngIf="!!inputValue.length">
+  <div #arrayItem *ngFor="let item of [1, 2, 3]">{{item}}</div>
+</ng-container>
+
+<ng-template #emptyPlaceholder>
+  <div>Empty Text</div>
+</ng-template>
+
+
+<div>Date Pipe</div>
+<p>{{1583422995300 | date: 'MM:dd:yyyy'}}</p>
+
+<div>Currency Pipe</div>
+<p>{{1 | currency: 'USD'}} {{currencyCodes.USD | currencyName}}</p>
+<p>{{1 | currency: 'EUR'}} {{currencyCodes.EUR | currencyName}}</p>
+<p>{{1 | currency: 'BYN'}} {{currencyCodes.BYN | currencyName}}</p>
+
+
+<app-dog-loader></app-dog-loader>

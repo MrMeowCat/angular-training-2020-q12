@@ -1,0 +1,16 @@
+input {
+  border: 1px solid grey;
+  width: 300px;
+  height: 40px;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+:host {
+  &.empty {
+    input {
+      border-color: red;
+    }
+  }
+}
+

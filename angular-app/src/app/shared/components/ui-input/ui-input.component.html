@@ -1,0 +1,9 @@
+<input [appOnlyNumbers]="onlyNumbers"
+       [value]="value"
+       [disabled]="disabled"
+       [class.not-empty]="!!value"
+       [style.color]="'blue'"
+       (keyup)="changeValue($event)"
+       (blur)="onTouch()"
+>
+
